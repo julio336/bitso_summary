@@ -1,0 +1,112 @@
+{% load static i18n compress%}<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{% block title %}bitso_summary{% endblock title %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+
+    <link rel="icon" href="{% static 'images/favicons/favicon.ico' %}">
+
+    {% block css %}
+    
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    
+
+    <!-- Your stuff: Third-party CSS libraries go here -->
+    {% compress css %}
+    <!-- This file stores project-specific CSS -->
+       <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="static/css/materialize.css" rel="stylesheet" media="screen,projection"/>
+  <link href="static/css/tienda.css" rel="stylesheet" media="screen,projection"/>
+    
+    {% endcompress %}
+    {% endblock %}
+
+  </head>
+
+  <body>
+
+    <nav class="white" role="navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="{% url 'index' %}" class="brand-logo">Bitso Summary</a>
+        <ul class="right hide-on-med-and-down">
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'index' %}">UPDATE</a>
+          </li>
+          <li class="nav-item">
+          </li>
+          
+        </ul>
+  
+        <ul id="nav-mobile" class="sidenav">
+          <li>
+              <a href="{% url 'index' %}">
+                  Bitso Summary
+              </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'index' %}">Home</a>
+          </li>
+          <li class="nav-item">
+          </li>
+         
+        </ul>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+  
+      </div>
+    </nav>
+
+    {% block contenido %}
+    {% endblock contenido %}
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Desarrollador por Julio Ahuactzin</h5>
+            <p class="grey-text text-lighten-4"><a href="https://twitter.com/_jahuactzin" target="_blank">@_jahuactzin</a></p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        </div>
+      </div>
+    </footer>
+  
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    {% block javascript %}
+      
+      <!-- Bootstrap JS and its dependencies-->
+      
+      <!-- Your stuff: Third-party javascript libraries go here -->
+      
+
+      <!-- place project specific Javascript in this file -->
+      {% compress js %}
+       <!--  Scripts-->
+      <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="static/js/materialize.js"></script>
+      <script src="static/js/init.js"></script>
+
+      {% endcompress %}
+
+    {% endblock javascript %}
+
+  </body>
+</html>
+ 
