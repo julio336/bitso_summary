@@ -26,7 +26,6 @@ class Indice(ListView):
             x = requests.post(url, data = myjson)
             y = json.loads(x.text)
             result_dict.append(y['payload'])
-           
         context.update({'cryptos': result_dict})
         return context
 
