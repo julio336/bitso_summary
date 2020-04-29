@@ -21,14 +21,12 @@
     
 
     <!-- Your stuff: Third-party CSS libraries go here -->
-    {% compress css %}
     <!-- This file stores project-specific CSS -->
        <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="static/css/materialize.css" rel="stylesheet" media="screen,projection"/>
   <link href="static/css/tienda.css" rel="stylesheet" media="screen,projection"/>
     
-    {% endcompress %}
     {% endblock %}
 
   </head>
@@ -97,13 +95,11 @@
       
 
       <!-- place project specific Javascript in this file -->
-      {% compress js %}
        <!--  Scripts-->
       <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script src="static/js/materialize.js"></script>
       <script src="static/js/init.js"></script>
 
-      {% endcompress %}
 
     {% endblock javascript %}
 
