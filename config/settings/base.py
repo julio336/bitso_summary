@@ -268,6 +268,8 @@ SOCIALACCOUNT_ADAPTER = "bitso_summary.users.adapters.SocialAccountAdapter"
 # ------------------------------------------------------------------------------
 # https://django-compressor.readthedocs.io/en/latest/quickstart/#installation
 INSTALLED_APPS += ["compressor"]
+INSTALLED_APPS += ["mathfilters"]
+
 STATICFILES_FINDERS += ["compressor.finders.CompressorFinder"]
 
 # Your stuff...
