@@ -10,7 +10,7 @@
                     <div class="card-content">
                             <p style="font-size:2em"><b>{{ crypto.book|upper }}</b></p>
                             <p style="font-size:1.5em"><b>$ {{ crypto.last }}</b></p>
-                            <!--<h6>% of change: {{ crypto.last|sub:crypto.low }}-->
+                            <p style="font-size:1em">Change: {{ crypto.rate|floatformat:1 }}%</p>
                             </h6>
                             <div class="row">
                                 <div class="col s6 m6">

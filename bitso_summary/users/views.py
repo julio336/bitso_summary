@@ -26,6 +26,17 @@ class Indice(ListView):
             x = requests.post(url, data = myjson)
             y = json.loads(x.text)
             result_dict.append(y['payload'])
+        for books in result_dict:
+            for k,v in books.items():
+                if k == "last":
+                    last = v
+                if k == "low":
+                    low = v
+                    try:
+                        change = ((float(last)-float(low))/float(low))*100
+                    except NameError:
+                        print("error") 
+            books.update({'rate': change})
         context.update({'cryptos': result_dict})
         return context
 
