@@ -17,7 +17,7 @@ class Indice(ListView):
     def get_context_data(self, **kwargs):
         context = super(Indice, self).get_context_data(**kwargs)
         books = [
-            "btc_mxn", "eth_mxn", "xrp_mxn", "ltc_mxn", "tusd_mxn", "mana_mxn", "gnt_mxn", "bat_mxn", "dai_mxn"
+            "btc_mxn", "btc_usd", "eth_mxn", "xrp_mxn", "ltc_mxn", "tusd_mxn", "mana_mxn", "gnt_mxn", "bat_mxn", "dai_mxn"
         ]
         result_dict = []
         for i in range(len(books)):
